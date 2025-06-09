@@ -9,11 +9,13 @@
 # r, annual rate of interest
 
 # Output:
-# compound interest = p * (1 + r/100)^t
+# compound interest = p * (1 + r/100)^t - p
 
 
 def compound_interest(p, t, r):
-    return p * (pow((1 + r / 100), t))
+    """Return the compound interest earned."""
+    amount = p * pow((1 + r / 100), t)
+    return amount - p
 
 
 if __name__ == "__main__":
